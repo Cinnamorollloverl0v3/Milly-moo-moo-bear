@@ -1,0 +1,109 @@
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+  }
+
+
+/* The hero section styling- use your OWN Hero Image URL here */
+.hero {
+    background-image: url('images/o9.PNG');
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+  header {
+    background-color: #ffe1e9;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #ffcedc;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .left-column {
+    display: flex;
+    flex-direction: column; /* stack top to bottom */
+    gap: 20px; /* spacing between Activities and Facts */
+    flex: 1; /* takes up one column */
+  }
+  
+  .left-box {
+    background-color: #fce4ec; /* light pink */
+    border: 2px solid #f48fb1; 
+    border-radius: 10px;
+    padding: 15px;
+    background: white;
+  }
+  
+  .right {
+    flex: 3; /* makes the right side wider */
+  }
+  
+  .left, .right {
+    padding: 15px;
+    background-color: #fce4ec; /* light pink */
+    border: 2px solid #f48fb1; 
+    border-radius: 8px;
+  }
+  
+  .left h2, .right h2 {
+    margin-top: 0;
+  }
+  
+  .right img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  /* Three column grid with a nice big gap */
+  .topic-content{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6em;
+      /* bring the whole section in off the sides of the page */
+      width: 70%;
+      /* top margin of 3em and center right/left */
+      margin: 3em auto;
+  }
+  
+  /* Styling for the individual topic cards rounded edges background color and a drop shadow */
+  .topic-card{
+      background-color: rgb(255, 207, 223);
+      color: rgb(255, 255, 255);
+      padding: 1em;
+      border-radius: 0.5em;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling for the topic card titles */
+  .topic-card-text{
+      font-size: 4.5em;
+      margin-bottom: 0.5em;
+      /* center align text */
+      text-align: center;
+  }/* Styling for a footer section to take a bit of spcae at the bottom of the page */
+
+  .extra-box {
+    background-color: #ffb7cf; /* light pink */
+    border: 2px solid #f48fb1; /* darker pink border */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  footer {
+    background: pink;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+  }
