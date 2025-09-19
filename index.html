@@ -18,8 +18,8 @@
             <!-- LEFT SIDE -->
             <section class="left-column">
               <!-- Activities -->
-              <div class="left-box">
-                <h2>Activities</h2>
+              <div class="box activities">
+                <h2>Activities ݁₊ ⊹ . ݁˖ . ݁·ꕤ</h2>
                 <ul>
                   <li>1</li>
                   <li>2</li>
@@ -28,16 +28,16 @@
               </div>
           
               <!-- Facts (underneath Activities) -->
-              <div class="left-box">
-                <h2>Facts</h2>
+              <div class="box facts">
+                <h2>Facts⋆｡‧˚ʚ♡ɞ˚‧｡⋆</h2>
                 <ul>
                   <li>1</li>
                   <li>2</li>
                   <li>3</li>
                 </ul>
               </div>
-              <div class="left-box">
-                <h2>Why I made a website about Milly</h2>
+              <div class="box why">
+                <h2>Why I made a website about Milly⋆˚✿˖°</h2>
                 <ul>
                   <li>1</li>
                   <li>2</li>
@@ -151,7 +151,81 @@
      <footer class="footer">
       <p>&copy; Milly's 2025 showcase♡</p>
     </footer>
+    <canvas id="confetti-canvas"></canvas>
+ 
 
+<!-- Welcome Popup -->
+<div id="welcome-popup">
+    <div class="popup-box">
+      <h2>⊹₊ ˚‧︵‿₊୨୧₊‿︵‧ ˚ ₊⊹</h2>
+      <h2>Welcome to Milly's Showcase! ✨</h2>
+      <p>Press start to look at her page! </p>
+      <button id="start-btn">Start</button>
+    </div>
+  </div>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    window.onload = () => {
+      // Start button event
+      document.getElementById("start-btn").addEventListener("click", () => {
+        // Hide the popup
+        document.getElementById("welcome-popup").style.display = "none";
+  
+        // Confetti effect (6 seconds)
+        const duration = 3 * 1000;
+        const animationEnd = Date.now() + duration;
+        const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
+  
+        function randomInRange(min, max) {
+          return Math.random() * (max - min) + min;
+        }
+  
+        const interval = setInterval(() => {
+          const timeLeft = animationEnd - Date.now();
+  
+          if (timeLeft <= 0) {
+            return clearInterval(interval);
+          }
+  
+          const particleCount = 50 * (timeLeft / duration);
+  
+          confetti(Object.assign({}, defaults, {
+            particleCount,
+            origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }
+          }));
+          confetti(Object.assign({}, defaults, {
+            particleCount,
+            origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }
+          }));
+        }, 250);
+      });
+    };
+  </script>
+  
+  
+  <script>
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        heart.style.animationDuration = 3 + Math.random() * 3 + "s"; // 3-6s duration
+        heart.style.fontSize = 12 + Math.random() * 18 + "px"; // random size
+        heart.textContent = "❤️";
+        document.body.appendChild(heart);
+    
+        // Remove heart after animation
+        setTimeout(() => {
+            heart.remove();
+        }, 6000); // slightly longer than max animation
+    }
+    
+    // Generate hearts continuously
+    setInterval(createHeart, 500); // one heart every 0.5s
+    </script>
+    
+    
     </section>
   </main>
 </body>
