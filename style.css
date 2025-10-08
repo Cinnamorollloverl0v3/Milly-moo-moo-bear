@@ -3,8 +3,13 @@ body {
   font-family: Georgia, serif;
   margin: 0;
   padding: 0;
+  body {
+    background-color: white;
+  }
+  
 }
 
+/* ====== Hero Section ====== */
 .hero {
   background: 
       linear-gradient(135deg, rgba(255,209,220,0.5), rgba(255,225,240,0.5)), 
@@ -20,100 +25,37 @@ body {
   position: relative;
 }
 
-
 .hero-text {
-  animation: float 3s ease-in-out infinite; /* floating animation */
-}
-
-/* ====== Header ====== */
-header {
-  background-color: #ffe1e9;
-  text-align: center;
-  padding: 20px;
-  border-bottom: 2px solid #ffcedc;
+  animation: float 3s ease-in-out infinite;
 }
 
 /* ====== Layout ====== */
 .container {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 30px;
 }
 
+/* LEFT SIDE */
 .left-column {
   display: flex;
-  flex-direction: column; /* stack top to bottom */
-  gap: 20px; /* spacing between Activities and Facts */
-  flex: 1; /* takes up one column */
+  flex-direction: column;
+  gap: 20px;
+  width: 280px; /* fixed smaller width */
 }
 
-.left-box {
-  background-color: #fce4ec; /* light pink */
-  border: 2px solid #f48fb1; 
-  border-radius: 10px;
-  padding: 15px;
-  background: white;
-}
-
+/* RIGHT SIDE */
 .right {
-  flex: 3; /* makes the right side wider */
+  flex: 1;
 }
-
-.left, .right {
-  padding: 15px;
-  background-color: #fce4ec; /* light pink */
-  border: 2px solid #f48fb1; 
-  border-radius: 8px;
-}
-
-.left h2, .right h2 {
-  margin-top: 0;
-}
-
-.right img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-/* ====== Topic Cards ====== */
-.topic-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6em;
-  width: 70%;
-  margin: 3em auto;
-}
-
-.topic-card {
-  background-color: rgb(255, 207, 223);
-  color: rgb(255, 255, 255);
-  padding: 1em;
-  border-radius: 0.5em;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-}
-
-.topic-card-text {
-  font-size: 4.5em;
-  margin-bottom: 0.5em;
-  text-align: center;
-}
-
-/* ====== Extra Box ====== */
-.extra-box {
-  background-color: #ffb7cf; /* light pink */
-  border: 2px solid #f48fb1; /* darker pink border */
+.right {
+  flex: 1;
+  background-color: #ffd6de; /* soft pink area */
   padding: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-/* ====== Footer ====== */
-footer {
-  background: pink;
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-  border-radius: 10px 10px 0 0;
-  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.4);
 }
 
 /* ====== Boxes ====== */
@@ -137,6 +79,47 @@ footer {
 .box.why {
   border-color: #D0A1FF;
   background-color: #F5EBFF;
+}
+
+/* ====== Topic Section ====== */
+.topic-title h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+.topic-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  width: 90%;
+  margin: 2em auto;
+}
+
+.topic-card {
+  background-color: rgb(255, 207, 223);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.topic-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,182,193,0.6);
+}
+
+.topic-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ====== Footer ====== */
+footer {
+  background: pink;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+  margin-top: 30px;
 }
 
 /* ====== Confetti Canvas ====== */
@@ -180,63 +163,56 @@ footer {
   color: #ff69b4;
 }
 
-.popup-box p {
-  margin-bottom: 20px;
-  font-size: 16px;
-  color: #444;
+/* ====== Image Popup ====== */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 182, 193, 0.7);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
 }
 
-#start-btn {
-  background: #ffb6c1;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
+.popup-content {
+  background: #ffe4ec;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+  max-width: 80%;
+  flex-wrap: wrap;
+  position: relative;
 }
 
-#start-btn:hover {
-  background: #ff69b4;
-  color: white;
-  transform: rotate(-5deg) scale(1.1);
+.popup-content img {
+  max-width: 400px;
+  border-radius: 15px;
+  flex: 1;
 }
 
-/* ====== Cute Fonts & Gradients ====== */
-h1, h2 {
-  font-family: 'Pacifico', cursive;
-  text-shadow: 1px 1px 3px #ffb6c1;
+.popup-text {
+  flex: 1;
+  min-width: 200px;
 }
 
-p, li {
-  font-family: 'Comic Neue', cursive;
-}
-
-h1 {
-  background: linear-gradient(45deg, #ffb6c1, #ffc0cb, #ffd1dc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* ====== List Item Hearts ====== */
-ul li::before {
-  content: "♡ ";
+#close-popup {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
   color: #ff69b4;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-/* ====== Floating Animation ====== */
-@keyframes pop {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-/* ====== Falling Hearts ====== */
+/* ====== Hearts Animation ====== */
 @keyframes fallHearts {
   0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
   100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
@@ -251,26 +227,60 @@ ul li::before {
   animation: fallHearts 5s linear infinite;
 }
 
-/* ====== Hover Effects ====== */
-.topic-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255,182,193,0.6);
-  transition: 0.3s;
-}
-
 /* ====== Responsive ====== */
 @media screen and (max-width: 768px) {
-  .topic-content {
-      grid-template-columns: 1fr;
-      gap: 2em;
-      width: 90%;
-  }
-
   .container {
-      flex-direction: column;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .left-column, .right {
-      width: 100%;
+  .left-column {
+    width: 90%;
   }
+
+  .topic-content {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+}
+.countdown-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffd6de;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+#countdown {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+  color: #4a001f;
+}
+#start-btn {
+  background-color: #ffb6c1;
+  color: #4a001f;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: shake 1.5s infinite ease-in-out;
+}
+
+/* When hovering, make it pop slightly */
+#start-btn:hover {
+  background-color: #ff8da1;
+  transform: scale(1.05);
+}
+
+/* Cute shake animation */
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
 }
