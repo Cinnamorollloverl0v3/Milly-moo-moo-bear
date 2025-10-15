@@ -284,3 +284,307 @@ footer {
   50% { transform: rotate(-2deg); }
   75% { transform: rotate(2deg); }
 }
+
+
+/* Make the QR code image bigger and remove the pink background */
+.box.activities img {
+  display: block;
+  width: 180px;  /* increase size */
+  height: auto;
+  margin: 20px auto; /* center it */
+  background: none; /* remove pink */
+  border: none;     /* remove border if any */
+  box-shadow: none; /* remove glow or outline */
+  border-radius: 0; /* make corners normal */
+}
+body {
+  background: linear-gradient(135deg, #fff0f6, #fffde1, #e8f8ff);
+  background-attachment: fixed;
+}
+.box {
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
+  transition: transform 0.3s ease;
+}
+.box:hover {
+  transform: scale(1.03);
+}
+.box {
+  border-radius: 25px;
+  border: 3px dashed #ffb6c1;
+}
+
+/* 🩷 Milly’s Instagram box */
+.box.activities img {
+  width: 180px;           /* make it bigger */
+  height: auto;
+  border: none;           /* removes pink border */
+  border-radius: 20px;    /* smooth rounded edges */
+  display: block;
+  margin: 15px auto;
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover effect for ✨ cuteness ✨ */
+.box.activities img:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 6px 15px rgba(255, 160, 200, 0.6);
+}
+
+/* 🐾 Decorative scrapbook look */
+.box.activities {
+  background-color: #fff7fb;
+  border: 2px dashed #ffb6c1;
+  padding: 20px;
+  border-radius: 25px;
+  position: relative;
+}
+
+.box.activities h2 {
+  text-align: center;
+  color: #4a001f;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(255, 192, 203, 0.5);
+}
+
+/* 🧸 Floating hearts inside box for extra cute vibe */
+.box.activities::after {
+  content: "♡";
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 18px;
+  color: #ff7ea8;
+  animation: float 3s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-5px); }
+}
+/* 💡 Make the "Facts" section easier to read */
+.box.facts {
+  background-color: #EBF6FC; /* soft blue */
+  border: 2px dashed #A1D3FF;
+  border-radius: 25px;
+  padding: 20px;
+  font-family: "Poppins", "Comic Sans MS", cursive;
+  line-height: 1.6;           /* more space between lines */
+  font-size: 1rem;            /* clean size */
+  color: #00334e;             /* darker blue text for readability */
+  box-shadow: 0 4px 10px rgba(161, 211, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box.facts:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(161, 211, 255, 0.5);
+}
+
+/* 💎 Headline style for the "Facts" title */
+.box.facts h2 {
+  text-align: center;
+  color: #006ea1;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 3px rgba(161, 211, 255, 0.5);
+}
+
+/* ✨ Make each fact pop with a cute bullet */
+.box.facts ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.box.facts li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+.box.facts li::before {
+  content: "💙";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* 💜 Why I Made This Website box */
+.box.why {
+  background-color: #F5EBFF; /* soft lavender */
+  border: 2px dashed #D0A1FF;
+  border-radius: 25px;
+  padding: 20px;
+  font-family: "Poppins", "Comic Sans MS", cursive;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #3b0066; /* deep lavender text */
+  box-shadow: 0 4px 10px rgba(208, 161, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box.why:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(208, 161, 255, 0.5);
+}
+
+/* 🌸 Title style */
+.box.why h2 {
+  text-align: center;
+  color: #7a33cc;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 3px rgba(208, 161, 255, 0.5);
+}
+
+/* 🫶 Make list items cute and readable */
+.box.why ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.box.why li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+.box.why li::before {
+  content: "💜";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* 💖 Add sparkle animation background to cute boxes */
+@keyframes subtleSparkle {
+  0% { background-position: 0 0; }
+  100% { background-position: 400% 400%; }
+}
+
+.box.facts,
+.box.why {
+  background-image: linear-gradient(135deg, #ffffff 0%, #fdfbff 25%, #fff4f9 50%, #f5f9ff 75%, #ffffff 100%);
+  background-size: 400% 400%;
+  animation: subtleSparkle 12s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ Add floating sparkle stickers inside boxes */
+.box.facts::after,
+.box.why::after {
+  content: "✿｡⋆｡❀";
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: rgba(255, 182, 255, 0.6);
+  font-size: 20px;
+  animation: floatStickers 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatStickers {
+  from { transform: translateY(0); opacity: 0.8; }
+  to { transform: translateY(-5px); opacity: 1; }
+}
+
+/* 🌸 Make each bullet a pastel “sticker dot” instead of just an emoji */
+.box.facts li::before {
+  content: "💙";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.box.why li::before {
+  content: "💜";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+/* little pop animation when hovering over a list item */
+.box.facts li:hover::before,
+.box.why li:hover::before {
+  transform: rotate(15deg) scale(1.2);
+}
+
+/* 💞 Cute hover lift for the list text */
+.box.facts li:hover,
+.box.why li:hover {
+  transform: translateX(5px);
+  transition: 0.3s ease;
+}
+
+/* 🌈 Add a soft gradient border glow on hover */
+.box.facts:hover, 
+.box.why:hover {
+  box-shadow: 0 6px 15px rgba(255, 200, 255, 0.6), 0 0 20px rgba(173, 216, 255, 0.4);
+}
+body {
+  cursor: url('https://cur.cursors-4u.net/nature/nat-11/nat1027.cur'), auto;
+}
+/* 🌸 MOBILE FIXES — keeps desktop layout the same */
+@media screen and (max-width: 768px) {
+  /* Make columns stack vertically */
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  /* Left column fills most of screen */
+  .left-column {
+    width: 95%;
+  }
+
+  /* Boxes take full width */
+  .box {
+    width: 100%;
+  }
+
+  /* Photos resize to fit smaller screens */
+  .topic-content {
+    grid-template-columns: 1fr;
+    gap: 1.2em;
+    width: 95%;
+  }
+
+  /* Countdown box fits nicely */
+  .countdown-box {
+    width: 95%;
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  /* Popup images scale properly */
+  .popup-content img {
+    max-width: 90%;
+  }
+
+  /* Popup layout becomes vertical for smaller width */
+  .popup-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust hero section so text & banner stay visible */
+  .hero {
+    height: 20vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Make text easier to read on small screens */
+  h1, h2 {
+    font-size: 1.3rem;
+  }
+
+  li {
+    font-size: 0.95rem;
+  }
+}

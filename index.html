@@ -224,6 +224,7 @@
               "images/IMG_4365.jpeg": "Milly after her bath, ready to play outside and poop",
               "images/IMG_3813.jpeg": "Her birthday!! She got spoiled all day long",
               "images/IMG_3646.jpeg": "She was being a silly billy here."
+              
             };
 
             description.textContent = descriptions[this.getAttribute("src")] || "A lovely memory!";
@@ -253,12 +254,13 @@
           const seconds = Math.floor((diff / 1000) % 60);
 
           document.getElementById("countdown").textContent =
-            `${days} days, ${hours} hours, ${minutes} mins, ${seconds} secs until June 25 💖`;
+            `${days} days, ${hours} hours, ${minutes} mins, ${seconds} secs until June 25!❤❤`;
         }
 
         setInterval(updateCountdown, 1000);
         updateCountdown();
       </script>
+
     </main>
   </body>
 </html>
