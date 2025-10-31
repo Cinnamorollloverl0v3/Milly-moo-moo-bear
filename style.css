@@ -603,3 +603,171 @@ body {
     font-size: 0.95rem;
   }
 }
+/* 🌸 Navigation bar */
+.navbar {
+  background-color: #ffe4ef;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 2px dashed #ffb6c1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #4a001f;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ff69b4;
+  text-shadow: 0 0 5px rgba(255, 182, 193, 0.6);
+}
+/* ====== Base ====== */
+body {
+  font-family: Georgia, serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #fff0f6, #fffde1, #e8f8ff);
+  background-attachment: fixed;
+  cursor: url('https://cur.cursors-4u.net/nature/nat-11/nat1027.cur'), auto;
+}
+
+/* ====== Navbar ====== */
+.navbar {
+  background-color: #ffe4ef;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 2px dashed #ffb6c1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navbar li {
+  display: inline;
+  margin: 0 15px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #4a001f;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.navbar a:hover, .navbar a.active {
+  color: #ff69b4;
+  text-shadow: 0 0 5px rgba(255, 182, 193, 0.6);
+}
+
+/* ====== Container ====== */
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 30px;
+}
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 280px;
+}
+.right {
+  flex: 1;
+}
+
+/* ====== Boxes ====== */
+.box {
+  border-radius: 25px;
+  border: 2px dashed #ffb6c1;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(255, 200, 255, 0.6), 0 0 20px rgba(173, 216, 255, 0.4);
+}
+.box h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* ====== Facts and Why ====== */
+.box.facts li, .box.why li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+.box.facts li::before { content: "💙"; position: absolute; left:0; top:0; }
+.box.why li::before { content: "💜"; position: absolute; left:0; top:0; }
+
+/* ====== Instagram QR ====== */
+.box.activities img {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(255,182,193,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.box.activities img:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 6px 15px rgba(255,160,200,0.6);
+}
+
+/* ====== Photos ====== */
+.topic-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+.topic-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255,182,193,0.3);
+}
+.topic-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255,160,200,0.6);
+}
+
+/* ====== Footer ====== */
+footer {
+  background: pink;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+  margin-top: 30px;
+}
+
+/* ====== Responsive ====== */
+@media screen and (max-width: 768px){
+  .container { flex-direction: column; align-items: center; }
+  .left-column { width: 95%; }
+  .topic-content { grid-template-columns: 1fr; width: 95%; gap: 1.2em; }
+  .box { width: 95%; }
+}
