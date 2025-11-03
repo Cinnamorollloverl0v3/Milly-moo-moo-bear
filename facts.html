@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Facts & Instagram 💌</title>
+</head>
+
+
+  <body>
+    <!-- Hero Section -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Milly Photos♡</a></li>
+        <li><a href="facts.html">Facts & Instagram </a></li>
+      </ul>
+    </nav>
+
+  <main class="container">
+    <!-- QR Code on the left -->
+    <section class="left-column">
+      <div class="box activities">
+        <h2>Milly's Instagram! ݁₊ ⊹ . ݁˖ . ݁·ꕤ</h2>
+        <img src="images/qr code.PNG" alt="Milly's Instagram QR Code">
+      </div>
+    </section>
+  
+    <!-- Facts + new pastel boxes on the right -->
+    <section class="right-column">
+      <div class="box facts">
+        <h2>Facts⋆｡‧˚ʚ♡ɞ˚‧｡⋆</h2>
+        <ul>
+          <li>After her bath she goes crazy and poops in excitement</li>
+          <li>She has weekly baths which include shampooing and conditioning. She even has her own bathtub!</li>
+          <li>She has so many outfits for different occasions like Christmas, Halloween, Easter, and more</li>
+          <li>She loves reading a book before bed every night.</li>
+          <li>She's the sassiest, most confident dog I know </li>
+        </ul>
+      </div>
+      <section class="left-column">
+      <div class="info-section">
+        <div class="box pink">
+          <h2>About Milly</h2>
+          <ul>
+            <li>She's 13 years of age</li>
+            <li>She's a Jack Russell terrier</li>
+            <li>Biggest belly ever</li>
+            <li>She's got pearly whites</li>
+            <li>I've known her for nearly two years!</li>
+          </ul>
+        </div>
+      
+        <div class="box lilac">
+          <h2>Favourite Things 💜</h2>
+          <ul>
+            <li>Her outfits</li>
+            <li>Treaties</li>
+            <li>Beds</li>
+            <li>Breakfast</li>
+            <li>Dinnerr</li>
+          </ul>
+        </div>
+      
+        <div class="box yellow">
+          <h2>What she does in her free time</h2>
+          <ul>
+            <li>Sleeping</li>
+            <li>Eating</li>
+            <li>Pooping</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Floating Hearts -->
+      <script>
+        function createHeart() {
+          const heart = document.createElement("div");
+          heart.classList.add("heart");
+          heart.style.left = Math.random() * window.innerWidth + "px";
+          heart.style.animationDuration = 3 + Math.random() * 3 + "s";
+          heart.style.fontSize = 12 + Math.random() * 18 + "px";
+          heart.textContent = "❤️";
+          document.body.appendChild(heart);
+
+          setTimeout(() => {
+            heart.remove();
+          }, 6000);
+        }
+        setInterval(createHeart, 500);
+      </script>
+
+  <footer>
+    <p>© Milly’s 2025 showcase♡</p>
+  </footer>
+</body>
+</html>
