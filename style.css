@@ -66,19 +66,10 @@ body {
   margin-bottom: 15px;
 }
 
-.box.activities {
-  border-color: #FFFFA1;
-  background-color: #FFFFC9;
-}
 
 .box.facts {
   border-color: #A1D3FF;
   background-color: #EBF6FC;
-}
-
-.box.why {
-  border-color: #D0A1FF;
-  background-color: #F5EBFF;
 }
 
 /* ====== Topic Section ====== */
@@ -301,16 +292,16 @@ footer {
 }
 
 
-/* Make the QR code image bigger and remove the pink background */
+
 .box.activities img {
   display: block;
-  width: 180px;  /* increase size */
+  width: 180px;  
   height: auto;
-  margin: 20px auto; /* center it */
-  background: none; /* remove pink */
-  border: none;     /* remove border if any */
-  box-shadow: none; /* remove glow or outline */
-  border-radius: 0; /* make corners normal */
+  margin: 20px auto; 
+  background: none; 
+  border: none;     
+  box-shadow: none; 
+  border-radius: 0; 
 }
 body {
   background: linear-gradient(135deg, #fff0f6, #fffde1, #e8f8ff);
@@ -330,10 +321,10 @@ body {
 
 /* 🩷 Milly’s Instagram box */
 .box.activities img {
-  width: 180px;           /* make it bigger */
+  width: 180px;           
   height: auto;
-  border: none;           /* removes pink border */
-  border-radius: 20px;    /* smooth rounded edges */
+  border: none;           
+  border-radius: 20px;    
   display: block;
   margin: 15px auto;
   box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
@@ -363,7 +354,7 @@ body {
   text-shadow: 1px 1px 3px rgba(255, 192, 203, 0.5);
 }
 
-/* 🧸 Floating hearts inside box for extra cute vibe */
+
 .box.activities::after {
   content: "♡";
   position: absolute;
@@ -841,7 +832,7 @@ nav a:hover {
 
 
 .left-column {
-  width: 300px;
+  width: 450px;
 }
 
 .right-column {
@@ -901,3 +892,76 @@ nav a:hover {
   left: 0;
   bottom: 0;
 }
+.box.pink h2 {
+  text-align: center;
+  color: #4a001f;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(255, 192, 203, 0.5);
+}
+
+
+.box.pink::after {
+  content: "♡";
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 18px;
+  color: #ff7ea8;
+  animation: float 3s ease-in-out infinite alternate;
+}
+.box.facts h2 {
+  text-align: center;
+  color: #4a001f;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(255, 192, 203, 0.5);
+}
+
+
+.box.facts::after {
+  content: "♡";
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 18px;
+  color: #ff7ea8;
+  animation: float 3s ease-in-out infinite alternate;
+}
+.box.lilac h2 {
+  text-align: center;
+  color: #4a001f;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(255, 192, 203, 0.5);
+}
+
+
+.box.lilac::after {
+  content: "♡";
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 18px;
+  color: #ff7ea8;
+  animation: float 3s ease-in-out infinite alternate;
+}
+.box.yellow h2 {
+  text-align: center;
+  color: #4a001f;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(255, 192, 203, 0.5);
+}
+
+
+.box.yellow::after {
+  content: "♡";
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 18px;
+  color: #ff7ea8;
+  animation: float 3s ease-in-out infinite alternate;
+}
+.box.pink li::before { content: "💙"; position: absolute; left:0; top:0; }
