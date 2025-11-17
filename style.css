@@ -8,7 +8,18 @@ body {
   }
   
 }
-
+.hero {
+  background-image: url('images/Captur.PNG');
+  height: 25vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
 /* ====== Hero Section ====== */
 .hero {
   background: 
@@ -578,7 +589,7 @@ body {
 
   /* Adjust hero section so text & banner stay visible */
   .hero {
-    height: 20vh;
+    height: 100vh;
     background-size: cover;
     background-position: center;
   }
@@ -636,16 +647,6 @@ body {
   cursor: url('https://cur.cursors-4u.net/nature/nat-11/nat1027.cur'), auto;
 }
 
-/* ====== Navbar ====== */
-.navbar {
-  background-color: #ffe4ef;
-  padding: 10px 0;
-  text-align: center;
-  border-bottom: 2px dashed #ffb6c1;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
 .navbar ul {
   list-style: none;
   padding: 0;
@@ -742,18 +743,7 @@ body {
 .topic-card img:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(255,160,200,0.6);
-}
 
-footer {
-  background: pink;
-  text-align: center;
-  padding: 20px;
-  border-radius: 0;      
-  margin-top: 40px;
-  width: 100%;           
-  position: relative;
-  left: 0;
-  bottom: 0;
 }
 footer {
   background: linear-gradient(135deg, #ffd6de, #ffb6c1);
@@ -785,7 +775,7 @@ nav ul {
 }
 
 nav a {
-  color: white;
+  color: rgb(255, 198, 222);
   text-decoration: none;
   font-weight: bold;
 }
@@ -888,7 +878,7 @@ nav a:hover {
   margin-top: 50px;
   border-radius: 0;
   width: 100%;
-  position: fixed;
+  position: static;
   left: 0;
   bottom: 0;
 }
@@ -964,4 +954,69 @@ nav a:hover {
   color: #ff7ea8;
   animation: float 3s ease-in-out infinite alternate;
 }
-.box.pink li::before { content: "💙"; position: absolute; left:0; top:0; }
+.box.pink li::before { content: "❤️"; position: absolute; left:0; top:0; }
+/* Layout Adjustments */
+.container {
+  display: block;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.left-column,
+.right-column,
+.info-section {
+  width: 100%;
+  float: none;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+/* List Style Adjustments */
+.box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.box li {
+  padding-left: 1.5em; /* Space for the heart */
+  position: relative;
+}
+
+.box li::before {
+  content: "❤️"; /* The heart bullet point */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* Style for the container to center the text within it */
+.countdown-box {
+  display: flex;       
+  justify-content: center;
+  align-items: center;     
+  
+}
+
+
+.countdown-text {
+  font-size: 1.5rem;
+  color: #4a001f;
+  text-align: center; 
+  width: 100%;        
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex; 
+  flex-direction: column; 
+  min-height: 100vh; 
+}
+
+
+.site-content {
+  flex-grow: 1; 
+}
