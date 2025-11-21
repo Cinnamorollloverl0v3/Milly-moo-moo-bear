@@ -8,18 +8,7 @@ body {
   }
   
 }
-.hero {
-  background-image: url('images/Captur.PNG');
-  height: 25vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  position: relative;
-}
+
 /* ====== Hero Section ====== */
 .hero {
   background: 
@@ -110,10 +99,6 @@ body {
   box-shadow: 0 0 15px rgba(255,182,193,0.6);
 }
 
-.topic-card img {
-  width: 100%;
-  border-radius: 8px;
-}
 
 .topic-card img {
   width: 100%;
@@ -304,16 +289,6 @@ footer {
 
 
 
-.box.activities img {
-  display: block;
-  width: 180px;  
-  height: auto;
-  margin: 20px auto; 
-  background: none; 
-  border: none;     
-  box-shadow: none; 
-  border-radius: 0; 
-}
 body {
   background: linear-gradient(135deg, #fff0f6, #fffde1, #e8f8ff);
   background-attachment: fixed;
@@ -330,7 +305,7 @@ body {
   border: 3px dashed #ffb6c1;
 }
 
-/* 🩷 Milly’s Instagram box */
+/* Milly’s Instagram box */
 .box.activities img {
   width: 180px;           
   height: auto;
@@ -342,7 +317,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* hover effect for ✨ cuteness ✨ */
+/* hover effect for cuteness */
 .box.activities img:hover {
   transform: scale(1.05) rotate(-2deg);
   box-shadow: 0 6px 15px rgba(255, 160, 200, 0.6);
@@ -514,8 +489,26 @@ body {
   transition: transform 0.3s ease;
 }
 
-.box.why li::before {
+.box.lilac li::before {
   content: "💜";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.box.yellow li::before {
+  content: "💛";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.box.pink li::before {
+  content: "💗";
   position: absolute;
   left: 0;
   top: 0;
@@ -525,21 +518,27 @@ body {
 
 /* little pop animation when hovering over a list item */
 .box.facts li:hover::before,
-.box.why li:hover::before {
+.box.pink li:hover::before,
+.box.yellow li:hover::before,
+.box.box.lilac li:hover::before {
   transform: rotate(15deg) scale(1.2);
 }
 
 /* 💞 Cute hover lift for the list text */
 .box.facts li:hover,
-.box.why li:hover {
+.box.pink li:hover,
+.box.lilac li:hover,
+.box.yellow li:hover {
   transform: translateX(5px);
   transition: 0.3s ease;
 }
 
 /* 🌈 Add a soft gradient border glow on hover */
 .box.facts:hover, 
-.box.why:hover {
-  box-shadow: 0 6px 15px rgba(255, 200, 255, 0.6), 0 0 20px rgba(173, 216, 255, 0.4);
+.box.box.yellow:hover, 
+.box.lilac:hover, 
+.box.pink:hover {
+  box-shadow: 0 6px 15px rgba(255, 137, 186, 0.6), 0 0 20px rgba(173, 216, 255, 0.4);
 
 }
 /* 🌸 MOBILE FIXES — keeps desktop layout the same */
@@ -1019,4 +1018,42 @@ body {
 
 .site-content {
   flex-grow: 1; 
+}
+
+
+.box.pink {
+  background-color: #ffdcec; 
+  border: 2px dashed #ffa9c6;
+  border-radius: 25px;
+  padding: 20px;
+  font-family: "Poppins", "Comic Sans MS", cursive;
+  line-height: 1.6;           /* more space between lines */
+  font-size: 1rem;            /* clean size */
+  color: #a8708a;             /* darker blue text for readability */
+  box-shadow: 0 4px 10px rgba(161, 211, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.box.lilac {
+  background-color: #ebdcff; 
+  border: 2px dashed #d1a9ff;
+  border-radius: 25px;
+  padding: 20px;
+  font-family: "Poppins", "Comic Sans MS", cursive;
+  line-height: 1.6;           /* more space between lines */
+  font-size: 1rem;            /* clean size */
+  color: #8e6ca5;             /* darker blue text for readability */
+  box-shadow: 0 4px 10px rgba(161, 211, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.box.yellow {
+  background-color: #fffcdc; 
+  border: 2px dashed #fff2a9;
+  border-radius: 25px;
+  padding: 20px;
+  font-family: "Poppins", "Comic Sans MS", cursive;
+  line-height: 1.6;           /* more space between lines */
+  font-size: 1rem;            /* clean size */
+  color: #d4ce7b;             /* darker blue text for readability */
+  box-shadow: 0 4px 10px rgba(161, 211, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
