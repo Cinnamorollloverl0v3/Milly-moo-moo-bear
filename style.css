@@ -1135,3 +1135,15 @@ main {
   margin-left: 0; 
   margin-right: 0;
 }
+.box.facts ul li {
+  margin-bottom: 25px; /
+}
+.box.lilac ul li {
+  margin-bottom: 20px; /
+}
+.box.box.pink ul li {
+  margin-bottom: 20px; /
+}
+.box.box.yellow ul li {
+  margin-bottom: 20px; /
+}
