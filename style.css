@@ -1057,3 +1057,81 @@ body {
   box-shadow: 0 4px 10px rgba(161, 211, 255, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #333; /* Fallback color */
+  width: 100%;
+}
+
+header img {
+  width: 100%;             /* Stretches full width */
+  height: auto;            /* Keeps image proportional */
+  max-height: 300px;       /* <-- INCREASED HEIGHT  */
+  display: block;
+  object-fit: cover;       
+}
+
+main {
+  padding: 20px;
+  font-family: sans-serif;
+}
+/* Styles to center the QR codes within the box */
+.qr-container {
+  display: flex;
+  justify-content: center; /* Centers the two QR items horizontally */
+  gap: 40px; /* Increased space between the two QR items */
+  margin-top: 15px; 
+}
+
+
+.qr-item {
+  text-align: center; 
+  position: relative; 
+}
+
+
+.qr-item img {
+  max-width: 180px;
+  height: auto;
+
+  padding: 5px; 
+}
+
+/* General styles for the label and arrow container */
+.label-arrow {
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%); 
+  white-space: nowrap; 
+  font-weight: bold;
+  color: #333;
+}
+
+/* Specific positioning for the Instagram (left-side) label */
+.qr-item .label-arrow {
+  right: 100%; /* Positions the label just outside the right edge of the image container */
+  padding-right: 10px; /* Space between the arrow and the image */
+}
+
+/* Specific positioning for the Website (right-side) label */
+.website-qr-item .label-arrow {
+  left: 100%; 
+  padding-left: 10px; 
+}
+
+
+/* Styles specifically for the arrow character */
+.arrow {
+  font-size: 1.5em; 
+  line-height: 1;
+
+  margin-left: 0; 
+  margin-right: 0;
+}
